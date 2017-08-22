@@ -35,3 +35,9 @@ A helper is template's logic. The template displays the data and the helper(_Log
 On the server, the collection has the job of talking to the MongoDB database, and reading and writing any changes. In this sense, it can be compared to a standard database library.
 
 On the client however, the collection is a copy of a subset of the real, canonical collection. The client-side collection is constantly and (mostly) transparently kept up to date with that subset in real-time.
+
+### Find & Fetch
+
+In Meteor, `find()` returns a cursor, which is a reactive data source. When we want to log its contents, we can then use `fetch()` on that cursor to transform it into an array.
+
+Within an app, Meteor is smart enough to know how to iterate over cursors without having to explicitly convert them into arrays first. This is why you won't see `fetch()` that often in actual Meteor code.
