@@ -41,3 +41,15 @@ On the client however, the collection is a copy of a subset of the real, canonic
 In Meteor, `find()` returns a cursor, which is a reactive data source. When we want to log its contents, we can then use `fetch()` on that cursor to transform it into an array.
 
 Within an app, Meteor is smart enough to know how to iterate over cursors without having to explicitly convert them into arrays first. This is why you won't see `fetch()` that often in actual Meteor code.
+
+### Snippet to publish and subscribe
+```
+//Server
+Meteor.publish('data name', function() {
+  return Posts.find();
+});
+```
+```
+//Client
+Meteor.subscribe('data name');
+```
