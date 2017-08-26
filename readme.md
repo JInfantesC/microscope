@@ -53,3 +53,25 @@ Meteor.publish('data name', function() {
 //Client
 Meteor.subscribe('data name');
 ```
+
+##  4. Router iron:Router
+https://github.com/iron-meteor/iron-router
+
+`{{> yield}}` helper will define a special dynamic zone that will automatically render whichever template corresponds to the current route.
+
+We remove <body> tags from main and inside router.js we map URLs to templates that will render inside `{{> yield}}`
+
+```
+/* Tell router the name of the template we will render
+ "layout at layout.html"    */
+Router.configure({
+    layoutTemplate: "layout"
+});
+/*We define a new route when we are at '/'
+that will load template postsList   */
+Router.route("/", {
+    name: "postsList"
+});
+```
+### `{{pathFor 'routeName'}}`
+`{{pathFor 'routeName'}}` is a Spacebars helper, it will return the URL of the route with name `'routeName'`
