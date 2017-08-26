@@ -1,7 +1,7 @@
 if (Posts.find().count() === 0) {
     Posts.insert({
-        title: 'Introducing Telescope',
-        url: 'http://sachagreif.com/introducing-telescope/'
+        title: 'Book. Discover meteor',
+        url: 'https://book.discovermeteor.com/'
     });
 
     Posts.insert({
@@ -10,7 +10,7 @@ if (Posts.find().count() === 0) {
     });
 
     Posts.insert({
-        title: 'The Meteor Book',
-        url: 'http://themeteorbook.com'
+        title: 'Reddit',
+        url: 'https://reddit.com'
     });
 }
