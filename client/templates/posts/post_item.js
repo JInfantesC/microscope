@@ -18,4 +18,14 @@ Template.postItem.helpers({
     ownPost: function() {
         return this.userId === Meteor.userId();
     },
+    clicks: function() {
+        return (this.clicks ? "Clicked " + this.clicks + " times" :
+            "Not clicked yet");
+    }
+
+});
+Template.postItem.events({
+    "click [name=link]": function(event, template) {
+        Meteor.call("postClick", this._id);
+    }
 });
