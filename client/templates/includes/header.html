@@ -20,6 +20,9 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {{> loginButtons}}
+                {{#if currentUser}}
+                    <img src="https://api.adorable.io/avatars/50/{{currentUser._id}}.png" width="50px"/>
+                {{/if}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
