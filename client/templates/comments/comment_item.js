@@ -1,5 +1,5 @@
 Template.commentItem.helpers({
     submittedText: function() {
-        return this.submitted.toString();
+        return moment(this.submitted).format('DD MMM YYYY HH:mm:ss');;
     }
 });
