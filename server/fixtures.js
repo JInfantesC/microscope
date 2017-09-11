@@ -1,16 +1,8 @@
 if (Posts.find().count() === 0) {
     Posts.insert({
-        title: 'Book. Discover meteor',
-        url: 'https://book.discovermeteor.com/'
-    });
-
-    Posts.insert({
-        title: 'Meteor',
-        url: 'http://meteor.com'
-    });
-
-    Posts.insert({
-        title: 'Reddit',
-        url: 'https://reddit.com'
+        title: 'Microscope',
+        url: 'http://192.168.1.103:3000/',
+        author: "This Meteor App",
+        submitted: new Date()
     });
 }
