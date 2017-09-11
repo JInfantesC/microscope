@@ -1,9 +1,15 @@
 <template name="commentItem">
-  <li>
-    <h4>
-      <span class="author">{{author}}</span>
-      <span class="date">on {{submittedText}}</span>
-    </h4>
-    <p>{{body}}</p>
+    <li>
+        <div class="logo">
+            <img src="https://api.adorable.io/avatars/50/{{userId}}.png" width="40px"/>
+        </div>
+        <div class="comment">
+            <h4>
+              <span class="author">{{author}}</span>
+              <span class="date">on {{submittedText}}</span>
+            </h4>
+            <p>{{body}}</p>
+        </div>
+
   </li>
 </template>
