@@ -30,3 +30,9 @@ Template.postItem.events({
         Meteor.call("postClick", this._id);
     }
 });
+Template.postItem.events({
+  'click .upvote': function(e) {
+    e.preventDefault();
+    Meteor.call('upvote', this._id);
+  }
+});

@@ -1,12 +1,14 @@
 <template name="postItem">
   <div class="post">
+    <a href="#" class="upvote btn btn-default">⬆</a>
     <div class="post-content">
       <h3><img src="http://www.google.com/s2/favicons?domain={{domain}}">
         <a href="{{url}}" target="blank" name="link">{{title}}</a>
         <span>{{domain}}</span>
       </h3>
       <p>
-        submitted by {{author}}, 
+        {{votes}} Votes,
+        submitted by {{author}},
         <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
         <span>{{clicks}}</span>
